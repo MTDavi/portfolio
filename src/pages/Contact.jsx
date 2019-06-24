@@ -13,7 +13,7 @@ class Contact extends Component {
                     
                         <h2>Contact</h2>
                         <p>
-                            Lorem Ipsum
+                            Lorem Ipsumk
                         </p>
                         <p>
                             Meaecenas
