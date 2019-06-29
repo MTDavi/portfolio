@@ -6,6 +6,7 @@ import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import Weather from './pages/Weather.jsx'
 import Instagram from './pages/Instagram.jsx'
+import Clock from './components/Clock.jsx'
 
 
 class App extends Component {
@@ -13,14 +14,15 @@ class App extends Component {
     return (
       <Router>
           <div className="container">
+          <Clock/>
           <Route exact path="/" component={Home}/>
           <Route path="/about" component={About}/>
           <Route path="/contact" component={Contact}/>
           <Route path="/weather" component={Weather}/>
           <Route path="/instagram" component={Instagram}/>
+          
         </div>
       </Router>
-      
     );
   }
 }
