@@ -156,7 +156,8 @@ export default class Clock extends React.Component {
     } = this.state;
 		
     return(
-			<div className={'Clock'}>
+			<div className="Clockall">
+        <div className={'Clock'}>
 				<FlipUnitContainer 
 					unit={'hours'}
 					digit={hours} 
@@ -172,7 +173,8 @@ export default class Clock extends React.Component {
 					digit={seconds} 
 					shuffle={secondsShuffle} 
 					/>
-			</div>
+			  </div>
+      </div>
 		);
 	}
 }
