@@ -1,30 +1,31 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {withRouter} from 'react-router-dom';
+
+import Routes from './Routes'
+import Clock from './components/Clock'
 import './App.css';
-import Home from './pages/Home.jsx'
-import About from './pages/About.jsx'
-import Contact from './pages/Contact.jsx'
-import Weather from './pages/Weather.jsx'
-import Instagram from './pages/Instagram.jsx'
-import Clock from './components/Clock.jsx'
+
+
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+
   render() {
-    return (
-      <Router>
-          <div className="container">
-          <Clock/>
-          <Route exact path="/" component={Home}/>
-          <Route path="/about" component={About}/>
-          <Route path="/contact" component={Contact}/>
-          <Route path="/weather" component={Weather}/>
-          <Route path="/instagram" component={Instagram}/>
-          
-        </div>
-      </Router>
+    return this.props.location.pathname === '/' ? <Routes/> : 
+    (
+      <div className="container" >
+        <Clock/>
+        <Routes/>
+      </div>
     );
   }
+
 }
 
-export default App;
+
+
+export default withRouter(props => <App {...props} />);

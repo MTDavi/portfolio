@@ -5,7 +5,7 @@ import './Clock.css'
 // function component
 const AnimatedCard = ({ animation, digit }) => {
   return(
-    <div className={`Clock ${animation}`}>
+    <div className={`flipCard ${animation}`}>
       <span>{digit}</span>
     </div>
   );

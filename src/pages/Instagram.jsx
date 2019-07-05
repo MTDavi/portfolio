@@ -17,6 +17,10 @@ class Instagram extends Component {
             .then((response) => response.json())
             .then((data) => this.setState({photos: data.hits}));
     }
+    
+    goBack(){
+        this.props.history.goBack();
+    }
 
     render() {
         return (
