@@ -23,13 +23,12 @@ class Instagram extends Component {
     }
 
     render() {
+        const photos = this.state.photos.length > 0 && this.state.photos.map(photo => <img src={photo.largeImageURL} 
+            alt='' className={`gallery__item-${photo.id}`} />);
         return (
-           <div>
-               {this.state === [] ? null:
-                this.state.photos.map(photo => <img src={photo.largeImageURL} ></img>)}
-              
-              <button onClick={() => this.goBack()}>Wróc</button>
-            </div>
+            <div>
+          {photos}
+          </div>
         )
     }
 }

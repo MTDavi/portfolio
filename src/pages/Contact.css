@@ -20,8 +20,11 @@
     display: flex;
   }
   .avatar-img {
-    height: 250px;
-    padding-top: 5em;
+    height: 300px;
+    padding-top: 10px;
+    padding-bottom:30px;
+    margin:auto
+    
   }
   
   .banner-text {

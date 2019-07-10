@@ -4,17 +4,17 @@ import Footer from '../components/Footer.jsx';
 import Jumbotron from '../components/Jumbotron.jsx';
 import { Grid, Cell } from 'react-mdl';
 import "./Contact.css"
-
+import avatar from "../images/b1.jpeg"
 
 class Contact extends Component {
   render() {
     return(
-      <div style={{width: '100%', margin: 'auto'}}>
+      <div style={{overflow: 'scroll' , width: '100%', margin: 'auto'}}>
         <Navbar />
         <Grid className="landing-grid">
           <Cell col={12}>
             <img
-              src="./images/b1.jpeg"
+              src={avatar}
               alt="avatar"
               className="avatar-img"
               />
@@ -29,24 +29,24 @@ class Contact extends Component {
         <div className="social-links">
 
           {/* LinkedIn */}
-          <a href="http://google.com" rel="noopener noreferrer" target="_blank">
+          <a href="http://linkedin.com" rel="noopener noreferrer" target="_blank">
             <i className="fa fa-linkedin-square" aria-hidden="true" />
           </a>
 
           {/* Github */}
-          <a href="http://google.com" rel="noopener noreferrer" target="_blank">
+          <a href="http://github.com" rel="noopener noreferrer" target="_blank">
             <i className="fa fa-github-square" aria-hidden="true" />
           </a>
-
-          {/* Freecodecamp */}
-          <a href="http://google.com" rel="noopener noreferrer" target="_blank">
-            <i className="fa fa-free-code-camp" aria-hidden="true" />
-          </a>
-
           {/* Youtube */}
-          <a href="http://google.com" rel="noopener noreferrer" target="_blank">
+          <a href="http://youtube.com" rel="noopener noreferrer" target="_blank">
             <i className="fa fa-youtube-square" aria-hidden="true" />
           </a>
+          {/* Bootstrap */}
+          <a href="http://getbootstrap.com" rel="noopener noreferrer" target="_blank">
+          <i classname="fab fa-bootstrap" aria-hidden="true" />
+          </a>
+          
+
 
         </div>
             </div>
@@ -56,6 +56,7 @@ class Contact extends Component {
     )
   }
 }
+
 
 
 

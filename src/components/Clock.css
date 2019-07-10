@@ -12,6 +12,8 @@ body {
 .Clockall {
   display: flex;
   position: relative;
+  resize: both;
+  overflow: auto;
   width: 100%;
   min-height: 20vh;
   justify-content: center;
