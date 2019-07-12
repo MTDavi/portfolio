@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
-import Navbar from '../components/Navbar.jsx';
-import Footer from '../components/Footer.jsx';
-import Jumbotron from '../components/Jumbotron.jsx';
-
+import './Instagram.css';
 
 class Instagram extends Component {
     constructor(props) {
@@ -13,7 +10,7 @@ class Instagram extends Component {
     }
 
     componentDidMount(){
-        fetch('https://pixabay.com/api/?key=6771879-3964c448f80d04a7a92b37074&q=dog&image_type=photo&pretty=true&page=1&per_page=10')
+        fetch('https://pixabay.com/api/?key=6771879-3964c448f80d04a7a92b37074&q=dog&image_type=photo&pretty=true&page=1&per_page=6')
             .then((response) => response.json())
             .then((data) => this.setState({photos: data.hits}));
     }
@@ -23,12 +20,15 @@ class Instagram extends Component {
     }
 
     render() {
-        const photos = this.state.photos.length > 0 && this.state.photos.map(photo => <img src={photo.largeImageURL} 
-            alt='' className={`gallery__item-${photo.id}`} />);
+        const photos = this.state.photos.length > 0 && this.state.photos.map((photo, index) =>
+            <figure className={`gallery__item gallery__item--${index+1}`} key={index}>
+                <img src={photo.largeImageURL} alt='' className='gallery__img'/>
+            </figure>
+        )
         return (
-            <div>
-          {photos}
-          </div>
+            <div className='gallery'>
+                {photos}
+            </div>
         )
     }
 }
