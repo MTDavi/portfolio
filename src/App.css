@@ -1,5 +1,8 @@
-.container{
-  width: fit-content;
+.container2 {
+  background: #fd746c; 
+  background: -webkit-linear-gradient(to left, #ff9068, #fd746c);  
+  background: linear-gradient(to left, #ff9068, #fd746c);
+  
   }
 .App {
   text-align: center;
@@ -27,11 +30,3 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

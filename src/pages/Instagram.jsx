@@ -18,6 +18,8 @@ class Instagram extends Component {
     goBack(){
         this.props.history.goBack();
     }
+    
+    
 
     render() {
         const photos = this.state.photos.length > 0 && this.state.photos.map((photo, index) =>
@@ -27,7 +29,9 @@ class Instagram extends Component {
         )
         return (
             <div className='gallery'>
+                <button className='goback'onClick={() => this.goBack()}>Go back!</button>
                 {photos}
+
             </div>
         )
     }

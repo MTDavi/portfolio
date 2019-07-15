@@ -4,6 +4,8 @@ import {withRouter} from 'react-router-dom';
 import Routes from './Routes'
 import Clock from './components/Clock'
 import './App.css';
+import Footer from './components/Footer'
+
 
 
 
@@ -18,11 +20,15 @@ class App extends Component {
   render() {
     return this.props.location.pathname === '/' ? <Routes/> : 
     (
+      
       <div className="container" >
-        
         <Clock/>
+      <div className="container2">
         <Routes/>
-      </div>
+        <Footer/>
+        </div>        
+        </div>
+      
     );
   }
 
