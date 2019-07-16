@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Navbar from '../components/Navbar.jsx';
+
 import Footer from '../components/Footer.jsx';
 import Jumbotron from '../components/Jumbotron.jsx';
 import { Grid, Cell } from 'react-mdl';
@@ -10,7 +10,7 @@ class Contact extends Component {
   render() {
     return(
       <div style={{overflow: 'scroll' , width: '100%', margin: 'auto'}}>
-        <Navbar />
+        
         <Grid className="landing-grid">
           <Cell col={12}>
             <img

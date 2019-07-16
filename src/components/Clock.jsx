@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Clock.css'
 
 
-// function component
+
 const AnimatedCard = ({ animation, digit }) => {
   return(
     <div className={`flipCard ${animation}`}>
@@ -11,7 +11,7 @@ const AnimatedCard = ({ animation, digit }) => {
   );
 };
 
-// function component
+
 const StaticCard = ({ position, digit }) => {
   return(
     <div className={position}>
@@ -20,14 +20,14 @@ const StaticCard = ({ position, digit }) => {
   );
 };
 
-// function component
+
 const FlipUnitContainer = ({ digit, shuffle, unit }) => {	
   
-  // assign digit values
+  
   let currentDigit = digit;
   let previousDigit = digit - 1;
 
-  // to prevent a negative value
+  
   if ( unit !== 'hours') {
     previousDigit = previousDigit === -1 
       ? 59 
@@ -38,7 +38,7 @@ const FlipUnitContainer = ({ digit, shuffle, unit }) => {
       : previousDigit;
   }
 
-  // add zero
+  
   if ( currentDigit < 10 ) {
     currentDigit = `0${currentDigit}`;
   } 
@@ -46,7 +46,7 @@ const FlipUnitContainer = ({ digit, shuffle, unit }) => {
     previousDigit = `0${previousDigit}`;
   }
 
-  // shuffle digits
+
   const digit1 = shuffle 
     ? previousDigit 
     : currentDigit;
@@ -54,7 +54,7 @@ const FlipUnitContainer = ({ digit, shuffle, unit }) => {
     ? previousDigit 
     : currentDigit;
 
-  // shuffle animations
+ 
   const animation1 = shuffle 
     ? 'fold' 
     : 'unfold';
@@ -84,7 +84,7 @@ const FlipUnitContainer = ({ digit, shuffle, unit }) => {
   );
 };
 
-// class component
+
 export default class Clock extends React.Component {
 	
   constructor(props) {
@@ -111,13 +111,12 @@ export default class Clock extends React.Component {
 	}
   
 	updateTime() {
-		// get new date
+		
 		const time = new Date;
-		// set time units
 		const hours = time.getHours();
 		const minutes = time.getMinutes();
 		const seconds = time.getSeconds();
-		// on hour chanage, update hours and shuffle state
+	
 		if( hours !== this.state.hours) {
 			const hoursShuffle = !this.state.hoursShuffle;
 			this.setState({
@@ -125,7 +124,7 @@ export default class Clock extends React.Component {
 				hoursShuffle
 			});
 		}
-		// on minute chanage, update minutes and shuffle state
+	
 		if( minutes !== this.state.minutes) {
 			const minutesShuffle = !this.state.minutesShuffle;
 			this.setState({
@@ -133,7 +132,7 @@ export default class Clock extends React.Component {
 				minutesShuffle
 			});
 		}
-		// on second chanage, update seconds and shuffle state
+		
 		if( seconds !== this.state.seconds) {
 			const secondsShuffle = !this.state.secondsShuffle;
 			this.setState({
@@ -145,7 +144,7 @@ export default class Clock extends React.Component {
   
 	render() {
     
-    // state object destructuring
+    
 		const { 
       hours, 
       minutes, 

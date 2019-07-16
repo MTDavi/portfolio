@@ -5,6 +5,8 @@ import Routes from './Routes'
 import Clock from './components/Clock'
 import './App.css';
 import Footer from './components/Footer'
+import Jumbotron from './components/Jumbotron';
+
 
 
 
@@ -23,11 +25,11 @@ class App extends Component {
       
       <div className="container" >
         <Clock/>
-      <div className="container2">
         <Routes/>
-        <Footer/>
+        
+        
         </div>        
-        </div>
+        
       
     );
   }

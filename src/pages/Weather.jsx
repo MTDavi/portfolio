@@ -61,7 +61,7 @@ export default class Weather extends React.Component {
         <div className="wrapper">
           <div className="main">
             <div className="container">
-              <button onClick={() => this.goBack()}>Wróc</button>
+              <button onClick={() => this.goBack()}>Go Back!</button>
               <div className="row">
                 <div className="col-xs-4 title-container">
                     <h2 className="title-conatiner__title">Weather Finder</h2>

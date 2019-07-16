@@ -7,29 +7,11 @@
   position: relative;
   resize: both;
   overflow: auto;
-  width: ;
+  width:100%;
   min-height: 30vh;
   justify-content: center;
   align-items: center;
-  background: #fd746c; 
-  background: -webkit-linear-gradient(to left, #ff9068, #fd746c);  
-  background: linear-gradient(to left, #ff9068, #fd746c);
- 
-  
-  
-}
-
-header {
-  display: flex;
-  position: relative;
-}
-header h1 {
-  font-family: "Droid Sans Mono", monospace;
-  font-weight: lighter;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: white;
-}
+  }
 
 .Clock {
   display: flex;

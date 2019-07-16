@@ -1,8 +1,10 @@
-.container2 {
-  background: #fd746c; 
+.container {
+  /*background: #fd746c; 
   background: -webkit-linear-gradient(to left, #ff9068, #fd746c);  
-  background: linear-gradient(to left, #ff9068, #fd746c);
-  
+  background: linear-gradient(to left, #ff9068, #fd746c);*/
+  margin:0;
+  padding:0;
+  min-width: 100%;
   }
 .App {
   text-align: center;

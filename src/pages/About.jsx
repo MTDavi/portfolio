@@ -1,15 +1,20 @@
 import React, {Component} from 'react';
-import TopNavbar from '../components/TopNavbar.jsx';
 import Jumbotron from '../components/Jumbotron.jsx';
-
+import './About.css'
 
 class About extends Component {
+
+    goBack(){
+        this.props.history.goBack();
+    }
+    
+
     render() {
         return (
            <div>
-               <TopNavbar />
+               
                <Jumbotron title="About" subtitle="The About subtitle"/>
-                    <div className="container">
+                    <div className="container2">
                     
                         <h2>About</h2>
                         <p>
@@ -62,7 +67,7 @@ Tłumaczenie H. Rackhama z 1914 roku
                         </p>
                     </div>
                     
-                 
+                 <button className='goback'onClick={() => this.goBack()}>Go back!</button>
             </div>
         );
     }
