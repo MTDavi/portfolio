@@ -4,9 +4,9 @@ import clamp from 'lodash-es/clamp'
 import { useSprings, animated } from 'react-spring'
 import { useGesture } from 'react-use-gesture'
 import './Instagram2.css'
-
-
-
+ 
+ 
+ 
 const pages = [
   'https://images.pexels.com/photos/62689/pexels-photo-62689.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
   'https://images.pexels.com/photos/296878/pexels-photo-296878.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -14,9 +14,9 @@ const pages = [
   'https://images.pexels.com/photos/351265/pexels-photo-351265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
   'https://images.pexels.com/photos/924675/pexels-photo-924675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
 ]
-
-
-
+ 
+ 
+ 
 function Viewpager() {
   const index = useRef(0)
   const [props, set] = useSprings(pages.length, i => ({ x: i * window.innerWidth, sc: 1, display: 'block' }))
@@ -30,12 +30,15 @@ function Viewpager() {
       return { x, sc, display: 'block' }
     })
   })
-  return props.map(({x, display, sc }, i) => (
-    <animated.div {...bind()} key={i} style={{ display, transform: x.interpolate(x => `translate3d(${x}px,0,0)`) }}>
-      <animated.div style={{ transform: sc.interpolate(s => `scale(${s})`), backgroundImage: `url(${pages[i]})` }} />
-    </animated.div>
-    
-        ))
-    
-  }
+  return (
+    <div className="spring-container">
+      {props.map(({ x, display, sc }, i) => (
+        <animated.div {...bind()} key={i} style={{ display, transform: x.interpolate(x => `translate3d(${x}px,0,0)`) }}>
+          <animated.div style={{ transform: sc.interpolate(s => `scale(${s})`), backgroundImage: `url(${pages[i]})` }} />
+        </animated.div>
+      ))}
+    </div>
+  )
+}
+ 
 export default Viewpager;
