@@ -1,4 +1,9 @@
 .container2{
     background-color: black;
     background-color:rgba(0, 0, 0, 0.5);
+    width:fit-content;
+    position:relative;
+    margin-left: 50%;
+    margin-right:50%;
+    
 }

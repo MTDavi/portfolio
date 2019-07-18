@@ -17,7 +17,7 @@ class LandingPage extends React.Component {
             <div className={`landing-page hover-${this.state.position}`}>
                 <div className="split left" data-class="left" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} >
                     <h1 className="title">Volleyball player</h1>
-                    <Link to="home" className="landing-button">Read More</Link>
+                    <Link to="about" className="landing-button">Read More</Link>
                 </div>
                 <div className="split right" data-class="right" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} >
                     <h1 className="title">The Programmer</h1>

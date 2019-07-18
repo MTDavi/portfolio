@@ -1,15 +1,14 @@
-/*.jumbotron {
-    background-image: url(../images/boxer.jpeg);
-    background-position: center;
+.jumbotron {
+    background-image: url(../images/sand.jfif);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     padding-bottom: 0px;
     width: 100%;
-    height: 380px;
+    height: 580px;
     border-radius: 10px 50px 10px 10px;
-    
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
     
 
 }
-*/
+

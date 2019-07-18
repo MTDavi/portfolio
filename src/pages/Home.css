@@ -1,11 +1,1 @@
-.tuna {
-    animation: walk-cycle 1s steps(12) infinite;
-    background: url(http://stash.rachelnabors.com/img/codepen/tuna_sprite.png) 0 0 no-repeat; 
-    height: 200px;
-    width: 400px;
-    position: absolute;
-    bottom: 1px;
-    left: 50%;
-    margin-left: -200px;
-    transform: translateZ(0); 
-}
+

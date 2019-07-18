@@ -7,12 +7,14 @@ import './Instagram2.css'
  
  
  
-const pages = [
-  'https://images.pexels.com/photos/62689/pexels-photo-62689.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-  'https://images.pexels.com/photos/296878/pexels-photo-296878.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-  'https://images.pexels.com/photos/1509428/pexels-photo-1509428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+const pages = 
+
+[
+  'https://images.pexels.com/photos/1433052/pexels-photo-1433052.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+  'https://images.pexels.com/photos/1999579/pexels-photo-1999579.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+  'https://images.pexels.com/photos/1236809/pexels-photo-1236809.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
   'https://images.pexels.com/photos/351265/pexels-photo-351265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-  'https://images.pexels.com/photos/924675/pexels-photo-924675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+  'https://images.pexels.com/photos/2253573/pexels-photo-2253573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 ]
  
  
@@ -30,6 +32,8 @@ function Viewpager() {
       return { x, sc, display: 'block' }
     })
   })
+
+  
   return (
     <div className="spring-container">
       {props.map(({ x, display, sc }, i) => (
