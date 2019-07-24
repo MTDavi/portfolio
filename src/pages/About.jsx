@@ -13,16 +13,9 @@ class About extends Component {
         return (
            <div>
                
-               <Jumbotron title="Volleyball player" subtitle="Name:Dawid Last Name:Fremel
-                    Position:Setter  
-                    Height:190cm"/>
+               <Jumbotron title="Descripcion" subtitle="coming soon..."/>
                     
-                    <div className="container2">
-                    
-                   <h1>Descripcion</h1>
-                   <p>Soon...</p>
-                    </div>
-                    
+                 
                  <button className='goback'onClick={() => this.goBack()}>Go back!</button>
             </div>
         );

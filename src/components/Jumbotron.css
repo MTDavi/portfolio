@@ -2,7 +2,8 @@
     background-image: url(../images/sand.jfif);
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
+    color: black;
+    font-weight: 900;
     padding-bottom: 0px;
     width: 100%;
     height: 580px;

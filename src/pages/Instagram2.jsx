@@ -17,7 +17,7 @@ const pages =
   'https://images.pexels.com/photos/2253573/pexels-photo-2253573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 ]
  
- 
+
  
 function Viewpager() {
   const index = useRef(0)
@@ -30,11 +30,18 @@ function Viewpager() {
       const x = (i - index.current) * window.innerWidth + (down ? xDelta : 0)
       const sc = down ? 1 - distance / window.innerWidth / 2 : 1
       return { x, sc, display: 'block' }
+
+      
+  function goBack()
+  {
+    this.props.history.goBack();
+  }
+  
     })
   })
 
-  
   return (
+    <div>
     <div className="spring-container">
       {props.map(({ x, display, sc }, i) => (
         <animated.div {...bind()} key={i} style={{ display, transform: x.interpolate(x => `translate3d(${x}px,0,0)`) }}>
@@ -42,6 +49,9 @@ function Viewpager() {
         </animated.div>
       ))}
     </div>
+    
+    <button className='goback'onClick={() => this.goBack()}>Go back!</button>
+     </div>
   )
 }
  
